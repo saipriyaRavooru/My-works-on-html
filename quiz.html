@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>General Knowledge Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: rgb(244, 244, 244);
+      padding: 20px;
+    }
+    .quiz-container {
+      background: rgb(255, 255, 255);
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    #submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: rgb(40, 167, 69);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>General Knowledge Quiz</h1>
+    <form id="quiz-form">
+
+    </form>
+    <button id="submit-btn">Submit Answers</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        question: "1. What is the capital of France?",
+        options: ["Berlin", "London", "Paris", "Madrid"],
+        answer: "Paris"
+      },
+      {
+        question: "2. Who wrote 'Romeo and Juliet'?",
+        options: ["William Shakespeare", "Mark Twain", "Charles Dickens", "Jane Austen"],
+        answer: "William Shakespeare"
+      },
+      {
+        question: "3. Which planet is known as the Red Planet?",
+        options: ["Earth", "Mars", "Jupiter", "Saturn"],
+        answer: "Mars"
+      },
+      {
+        question: "4. What is the largest ocean on Earth?",
+        options: ["Atlantic", "Indian", "Arctic", "Pacific"],
+        answer: "Pacific"
+      },
+      {
+        question: "5. What is H2O commonly known as?",
+        options: ["Salt", "Water", "Oxygen", "Hydrogen"],
+        answer: "Water"
+      },
+      {
+        question: "6. Who painted the Mona Lisa?",
+        options: ["Vincent Van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"],
+        answer: "Leonardo da Vinci"
+      },
+      {
+        question: "7. What is the smallest prime number?",
+        options: ["0", "1", "2", "3"],
+        answer: "2"
+      },
+      {
+        question: "8. Which language is primarily spoken in Brazil?",
+        options: ["Spanish", "Portuguese", "French", "English"],
+        answer: "Portuguese"
+      },
+      {
+        question: "9. What currency is used in Japan?",
+        options: ["Won", "Yuan", "Yen", "Rupee"],
+        answer: "Yen"
+      },
+      {
+        question: "10. Which organ pumps blood through the body?",
+        options: ["Lungs", "Brain", "Kidney", "Heart"],
+        answer: "Heart"
+      }
+    ];
+
+    const form = document.getElementById("quiz-form");
+
+    quizData.forEach((q, index) => {
+      const questionDiv = document.createElement("div");
+      questionDiv.classList.add("question");
+
+      const questionText = document.createElement("p");
+      questionText.textContent = q.question;
+
+      const optionsDiv = document.createElement("div");
+      optionsDiv.classList.add("options");
+
+      q.options.forEach(option => {
+        const label = document.createElement("label");
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "question" + index;
+        input.value = option;
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+      });
+
+      questionDiv.appendChild(questionText);
+      questionDiv.appendChild(optionsDiv);
+      form.appendChild(questionDiv);
+    });
+
+    document.getElementById("submit-btn").addEventListener("click", function(e) {
+      e.preventDefault();
+      let score = 0;
+
+      quizData.forEach((q, index) => {
+        const selected = document.querySelector('input[name="question' + index + '"]:checked');
+        if (selected && selected.value === q.answer) {
+          score++;
+        }
+      });
+
+      const result = document.getElementById("result");
+      result.textContent = `You scored ${score} out of ${quizData.length}`;
+      result.style.color = score >= 7 ? 'green' : 'red';
+    });
+  </script>
+</body>
+</html>

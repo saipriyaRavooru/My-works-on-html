@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pricing Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .pricing-table {
+            display: flex;
+            gap: 10px;
+            max-width: 900px;
+            width: 100%;
+        }
+        .plan {
+            background: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            flex: 1;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .plan.popular {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+        .plan .header {
+            padding: 20px;
+            color: white;
+        }
+        .starter {
+            background-color: #5dade2;
+        }
+        .econo {
+            background-color: #3498db;
+        }
+        .standard {
+            background-color: #2e86c1;
+        }
+        .professional {
+            background-color: #1f618d;
+        }
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .per-month {
+            font-size: 14px;
+            color: #eee;
+        }
+        .features {
+            background-color: #f9f9f9;
+            text-align: left;
+            padding: 20px;
+        }
+        .features div {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .signup {
+            padding: 20px;
+        }
+        .signup button {
+            background-color: #ddd;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .signup button:hover {
+            background-color: #bbb;
+        }
+        .hot-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #e74c3c;
+            color: white;
+            font-size: 10px;
+            padding: 5px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pricing-table">
+
+        <div class="plan starter">
+            <div class="header">starter</div>
+            <div class="price">$10</div>
+            <div class="per-month">per month</div>
+            <div class="features">
+                <div>Amount of space: 10GB</div>
+                <div>Bandwidth per month: 100GB</div>
+                <div>No. of e-mail accounts: 1</div>
+                <div>No. of MySql databases: 1</div>
+                <div>24h support: Yes</div>
+                <div>Support tickets per mo.: 1</div>
+            </div>
+            <div class="signup">
+                <button>sign up!</button>
+            </div>
+        </div>
+
+        <div class="plan econo">
+            <div class="header">econo</div>
+            <div class="price">$30</div>
+            <div class="per-month">per month</div>
+            <div class="features">
+                <div>Amount of space: 30GB</div>
+                <div>Bandwidth per month: 200GB</div>
+                <div>No. of e-mail accounts: 10</div>
+                <div>No. of MySql databases: 10</div>
+                <div>24h support: Yes</div>
+                <div>Support tickets per mo.: 3</div>
+            </div>
+            <div class="signup">
+                <button>sign up!</button>
+            </div>
+        </div>
+
+        <div class="plan standard popular">
+            <div class="header">standard <span class="hot-tag">HOT</span></div>
+            <div class="price">$59</div>
+            <div class="per-month">per month</div>
+            <div class="features">
+                <div>Amount of space: 100GB</div>
+                <div>Bandwidth per month: 500GB</div>
+                <div>No. of e-mail accounts: 50</div>
+                <div>No. of MySql databases: 50</div>
+                <div>24h support: Yes</div>
+                <div>Support tickets per mo.: 5</div>
+            </div>
+            <div class="signup">
+                <button>sign up!</button>
+            </div>
+        </div>
+
+        <div class="plan professional">
+            <div class="header">professional <span class="hot-tag">HOT</span></div>
+            <div class="price">$99</div>
+            <div class="per-month">per month</div>
+            <div class="features">
+                <div>Amount of space: Unlimited</div>
+                <div>Bandwidth per month: 1000GB</div>
+                <div>No. of e-mail accounts: Unlimited</div>
+                <div>No. of MySql databases: Unlimited</div>
+                <div>24h support: Yes</div>
+                <div>Support tickets per mo.: 10</div>
+            </div>
+            <div class="signup">
+                <button>sign up!</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

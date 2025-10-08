@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Feedback Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: rgb(221, 210, 214); ">
+
+    <h2 style="background-color: salmon; text-align: center;">Feedback Form</h2>
+    <fieldset>
+            <legend><h2>Customer Feedback Form</h2></legend>
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"><br><br>
+            <label for="service">Service Used:</label><br>
+            <select id="service" name="service">
+                <option value="">-- Select --</option>
+                <option value="support">Customer Support</option>
+                <option value="delivery">Delivery</option>
+                <option value="product">Product Quality</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <label for="rating">Rate Our Service:</label><br>
+            <input type="radio" id="excellent" name="rating" value="Excellent">
+            <label for="excellent">Excellent</label><br>
+            <input type="radio" id="good" name="rating" value="Good">
+            <label for="good">Good</label><br>
+            <input type="radio" id="average" name="rating" value="Average">
+            <label for="average">Average</label><br>
+            <input type="radio" id="poor" name="rating" value="Poor">
+            <label for="poor">Poor</label><br><br>
+            <label for="comments">Additional Comments:</label><br>
+            <textarea id="comments" name="comments" rows="5" cols="40"></textarea><br><br>
+            <input type="submit" value="Submit Feedback">
+         </fieldset>
+    </form>
+
+</body>
+</html>

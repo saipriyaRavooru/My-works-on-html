@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weekly Weather Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: rgb(135, 206, 235); 
+      margin: 0;
+      padding: 20px;
+      color: rgb(51, 51, 51);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgb(255, 255, 255);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .location {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    .week {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .day {
+      background: rgb(240, 248, 255);
+      border-radius: 8px;
+      padding: 10px;
+      width: 12.5%; 
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-size: 14px;
+    }
+
+    .day-name {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .temp {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Weekly Weather</h1>
+    <div class="location">New York City</div>
+    <div class="week">
+      <div class="day">
+        <div class="day-name">Mon</div>
+        <div class="icon">☀️</div>
+        <div class="temp">75°F / 60°F</div>
+      </div>
+      <div class="day">
+        <div class="day-name">Tue</div>
+        <div class="icon">⛅</div>
+        <div class="temp">73°F / 58°F</div>
+      </div>
+      <div class="day">
+        <div class="day-name">Wed</div>
+        <div class="icon">🌧️</div>
+        <div class="temp">68°F / 55°F</div>
+      </div>
+      <div class="day">
+        <div class="day-name">Thu</div>
+        <div class="icon">⛅</div>
+        <div class="temp">70°F / 57°F</div>
+      </div>
+      <div class="day">
+        <div class="day-name">Fri</div>
+        <div class="icon">☀️</div>
+        <div class="temp">77°F / 61°F</div>
+      </div>
+      <div class="day">
+        <div class="day-name">Sat</div>
+        <div class="icon">🌩️</div>
+        <div class="temp">65°F / 54°F</div>
+      </div>
+      <div class="day">
+        <div class="day-name">Sun</div>
+        <div class="icon">☀️</div>
+        <div class="temp">78°F / 62°F</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

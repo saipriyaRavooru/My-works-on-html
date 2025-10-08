@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Custom Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(226, 240, 249);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .calculator-heading {
+      color: rgb(51, 51, 51);
+      margin-bottom: 20px;
+      user-select: none;
+      font-size: 2.5rem;
+    }
+
+    .calculator {
+      display: grid;
+      grid-template-columns: repeat(3, 60px) 60px;
+      gap: 10px;
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #display {
+      grid-column: span 4;
+      height: 50px;
+      font-size: 24px;
+      text-align: right;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 2px solid rgb(204, 204, 204);
+      border-radius: 8px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .number {
+      background-color: rgb(208, 231, 255);
+    }
+
+    .number:hover {
+      background-color: rgb(181, 217, 255);
+    }
+
+    .operator {
+      background-color: rgb(255, 194, 102);
+    }
+
+    .operator:hover {
+      background-color: rgb(255, 179, 71);
+    }
+
+    .clear {
+      background-color: rgb(255, 127, 127);
+    }
+
+    .clear:hover {
+      background-color: rgb(255, 76, 76);
+    }
+
+    .equal {
+      background-color: rgb(76, 175, 80);
+      color: white;
+    }
+
+    .equal:hover {
+      background-color: rgb(69, 160, 73);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="calculator-heading">My Calculator</h1>
+
+  <div class="calculator">
+    <input type="text" id="display" readonly />
+
+    <button class="number" onclick="appendValue('9')">9</button>
+    <button class="number" onclick="appendValue('8')">8</button>
+    <button class="number" onclick="appendValue('7')">7</button>
+    <button class="operator" onclick="appendValue('+')">+</button>
+
+    <button class="number" onclick="appendValue('6')">6</button>
+    <button class="number" onclick="appendValue('5')">5</button>
+    <button class="number" onclick="appendValue('4')">4</button>
+    <button class="operator" onclick="appendValue('-')">−</button>
+
+    <button class="number" onclick="appendValue('3')">3</button>
+    <button class="number" onclick="appendValue('2')">2</button>
+    <button class="number" onclick="appendValue('1')">1</button>
+    <button class="operator" onclick="appendValue('*')">×</button>
+
+    <button></button> 
+    <button class="number" onclick="appendValue('0')">0</button>
+    <button class="clear" onclick="clearDisplay()">C</button>
+    <button class="operator" onclick="appendValue('/')">÷</button>
+
+    <button></button>
+    <button></button>
+    <button class="equal" onclick="calculate()" style="grid-column: span 2;">=</button>
+  </div>
+
+  <script>
+    function appendValue(val) {
+      document.getElementById('display').value += val;
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+
+    function calculate() {
+      try {
+        let result = eval(document.getElementById('display').value);
+        document.getElementById('display').value = result;
+      } catch (error) {
+        alert('Invalid Input');
+      }
+    }
+  </script>
+</body>
+</html>

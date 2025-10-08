@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    #colorBox {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin-bottom: 20px;
+    }
+    #dblClickText {
+      background: rgb(238, 238, 238);
+      padding: 10px;
+      width: fit-content;
+      cursor: pointer;
+      user-select: none;
+    }
+    input, select, button {
+      margin-top: 10px;
+      padding: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Events Demo</h1>
+
+  <!-- Event 1: Click -->
+  <div id="colorBox"></div>
+  <button onclick="changeColor()">Click to Change Color</button>
+
+  <!-- Event 2: Double Click -->
+  <h3>Double-Click Event</h3>
+  <p id="dblClickText" ondblclick="handleDoubleClick()">Double-click this text!</p>
+
+  <!-- Event 3: Keydown -->
+  <h3>Type Something (keydown)</h3>
+  <input type="text" id="keyInput" placeholder="Type here">
+  <p id="keyDisplay">You typed: </p>
+
+  <!-- Event 4: Change -->
+  <h3>Select an Option (change)</h3>
+  <select id="dropdown" onchange="handleSelect()">
+    <option value="">Choose...</option>
+    <option value="Apple">Apple</option>
+    <option value="Banana">Banana</option>
+    <option value="Cherry">Cherry</option>
+  </select>
+
+  <!-- Event 5: Submit -->
+  <h3>Form Submission (submit)</h3>
+  <form id="nameForm">
+    <input type="text" id="nameInput" placeholder="Enter your name" required>
+    <button type="submit">Submit</button>
+  </form>
+  <p id="formResult"></p>
+
+  <script>
+    // Event 1: Click
+    function changeColor() {
+      const box = document.getElementById("colorBox");
+      box.style.backgroundColor = box.style.backgroundColor === "lightblue" ? "orange" : "lightblue";
+    }
+
+    // Event 2: Double Click
+    function handleDoubleClick() {
+      const para = document.getElementById("dblClickText");
+      para.textContent = "HELLO!";
+      para.style.backgroundColor = "#d1ffd1";
+    }
+
+    // Event 3: Keydown
+    document.getElementById("keyInput").addEventListener("keydown", function(e) {
+      document.getElementById("keyDisplay").textContent = "You typed: " + e.key;
+    });
+
+    // Event 4: Change
+    function handleSelect() {
+      const value = document.getElementById("dropdown").value;
+      if (value) {
+        alert("You selected: " + value);
+      }
+    }
+
+    // Event 5: Submit
+    document.getElementById("nameForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("nameInput").value;
+      document.getElementById("formResult").textContent = `Hello, ${name}!`;
+      document.getElementById("nameForm").reset();
+    });
+  </script>
+
+</body>
+</html>

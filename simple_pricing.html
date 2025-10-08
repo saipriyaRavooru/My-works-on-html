@@ -1,0 +1,158 @@
+<html>
+<head>
+  <title> simple Pricing table</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pricing-container {
+      display: flex;
+      gap: 20px;
+    }
+    .icon {
+     width: 200px;
+     height: 150px;
+     margin-bottom: 40px;
+   }
+
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 30px 20px;
+      width: 200px;
+      height: 500px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .card p {
+      color: #777;
+      margin: 5px 0 20px;
+      font-size: 14px;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .price span {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features li {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+
+   
+    .personal .price { color: #6a4dff; }
+    .business .price { color: #ff6b4d; }
+    .enterprise .price { color: #6a4dff; }
+
+    .personal .btn { background: #6a4dff; }
+    .personal .btn:hover { background: #5534d6; }
+
+    .business .btn { background: #ff6b4d; }
+    .business .btn:hover { background: #e0553a; }
+
+    .enterprise .btn { background: #6a4dff; }
+    .enterprise .btn:hover { background: #5534d6; }
+
+  </style>
+</head>
+<body>
+  <div class="pricing-container">
+  
+    <div class="card personal">
+      <h2>Personal</h2>
+      <p>We Think Ahead</p>
+      <div class="price">$29 <span>/month</span></div>
+      <ul class="features">
+        <li>Mobile-Optimized</li>
+        <li>Free Custom Domain</li>
+        <li>Best Web Hosting</li>
+        <li>Outstanding Support Team</li>
+        <li>Our Happy Customers</li>
+      </ul>
+       <a class="navbar-item" href="#">
+       <img src="pic1.png" alt="pic1" class="icon"></a>
+
+      <a href="#" class="btn">READ MORE</a>
+    </div>
+
+    
+    <div class="card business">
+      <h2>Business</h2>
+      <p>Special Offer</p>
+      <div class="price">$38 <span>/month</span></div>
+      <ul class="features">
+        <li>Mobile-Optimized</li>
+        <li>Free Custom Domain</li>
+        <li>Best Web Hosting</li>
+        <li>Outstanding Support Team</li>
+        <li>Our Happy Customers</li>
+      </ul>
+       <a class="navbar-item" href="#">
+       <img src="pic2.png" alt="pic2" class="icon"></a>
+      <a href="#" class="btn">READ MORE</a>
+    </div>
+
+    
+    <div class="card enterprise">
+      <h2>Enterprise</h2>
+      <p>Our Best Solution</p>
+      <div class="price">$75 <span>/month</span></div>
+      <ul class="features">
+        <li>Mobile-Optimized</li>
+        <li>Free Custom Domain</li>
+        <li>Best Web Hosting</li>
+        <li>Outstanding Support Team</li>
+        <li>Our Happy Customers</li>
+      </ul>
+       <a class="navbar-item" href="#">
+       <img src="pic3.png" alt="pic3" class="icon"></a>
+      <a href="#" class="btn">READ MORE</a>
+    </div>
+  </div>
+</body>
+</html>

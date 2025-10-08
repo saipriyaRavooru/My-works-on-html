@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review</title>
+    <style>
+        body {
+            background-color: #89de77;
+            font-family: Arial, sans-serif;
+        }
+
+        .movie-poster {
+            float: right;
+            margin-left: 20px;
+            width: 200px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <fieldset>
+            <legend><h2>Movie Review Form</h2></legend>
+
+            <img src="images/movie.jpg" alt="Movie Poster" class="movie-poster">
+
+            <label>Your Name:</label><br>
+            <input type="text"><br><br>
+
+            <label>Your Email:</label><br>
+            <input type="email"><br><br>
+
+            <label>Movie Name:</label><br>
+            <input type="text"><br><br>
+
+            <label>Rating (1 to 5):</label><br>
+            <select>
+                <option selected>Select rating</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select><br><br>
+
+            <hr>
+
+            <label>Your Review:</label><br>
+            <textarea rows="6" cols="50" placeholder="Write your thoughts about the movie here..."></textarea><br><br>
+
+            <input type="submit" value="Submit Review">
+        </fieldset>
+    </form>
+
+</body>
+</html>

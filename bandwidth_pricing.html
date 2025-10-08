@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bandwidth Pricing Table</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background-color: #8cc63f;
+            color: white;
+            font-weight: bold;
+            padding: 15px;
+        }
+        td {
+            padding: 15px;
+        }
+        tr:nth-child(even) {
+            background-color: #edf7e6;
+        }
+        tr:nth-child(odd):not(:first-child) {
+            background-color: #f5fbf2;
+        }
+        td:first-child {
+            background-color: #8cc63f;
+            color: white;
+            font-weight: bold;
+        }
+        .checkmark {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        tfoot td {
+            font-size: 20px;
+            font-weight: bold;
+            color: #8cc63f;
+            border-top: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Smart Starter</th>
+                <th>Smart Medium</th>
+                <th>Smart Business</th>
+                <th>Smart Deluxe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Storage Space</td>
+                <td>512 MB</td>
+                <td>1 GB</td>
+                <td>2 GB</td>
+                <td>4 GB</td>
+            </tr>
+            <tr>
+                <td>Bandwidth</td>
+                <td>50 GB</td>
+                <td>100 GB</td>
+                <td>150 GB</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>MySQL Databases</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>Setup</td>
+                <td>19.90 $</td>
+                <td>12.90 $</td>
+                <td>free</td>
+                <td>free</td>
+            </tr>
+            <tr>
+                <td>PHP 5</td>
+                <td><span class="checkmark">&#10003;</span></td>
+                <td><span class="checkmark">&#10003;</span></td>
+                <td><span class="checkmark">&#10003;</span></td>
+                <td><span class="checkmark">&#10003;</span></td>
+            </tr>
+            <tr>
+                <td>Ruby on Rails</td>
+                <td><span class="checkmark">&#10003;</span></td>
+                <td><span class="checkmark">&#10003;</span></td>
+                <td><span class="checkmark">&#10003;</span></td>
+                <td><span class="checkmark">&#10003;</span></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Price per month</td>
+                <td>$ 2.90</td>
+                <td>$ 5.90</td>
+                <td>$ 9.90</td>
+                <td>$ 14.90</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
